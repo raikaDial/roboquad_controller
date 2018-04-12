@@ -1,9 +1,48 @@
 <html>
+<head>
+	<link rel="stylesheet" href="/static/styles.css"/>
 <body>
 	<h1>Roboquad Interface</h1>
-	<div>
+	<div class="dropdown">
+		<button class="dropbtn">Change Shift Level, Currently: {{shift_level}}</button>
+		<div id="shiftDropdown" class="dropdown-content">
 		<a href="/shift1">Shift 1</a>
-		<a href="/dm">Demo</a>
+		<a href="/shift2">Shift 2</a>
+		<a href="/shift3">Shift 3</a>
+		<a href="/shift4">Shift 4</a>
+		</div>
 	</div>
+	<section class="container">
+		<div id="driveDiv" class="one">
+			<h2>Movement</h2>
+			<p style = "text-align: center">
+				<a href="/tl" class="button">Top Left</a>
+				<a href="/fw" class="button">Forward</a>
+				<a href="/tr" class="button">Top Right</a><br/>
+				<a href="/lf" class="button">Left</a>
+				<a href="/st" class="button">Stop</a>
+				<a href="/rt" class="button">Right</a><br/>
+				<a href="/bl" class="button">Bottom Left</a>
+				<a href="/bw" class="button">Backward</a>
+				<a href="/br" class="button">Bottom Right</a>
+				<br/><br/>
+				<a href="/cw" class="button">Rotate Clockwise</a>
+				<a href="/cc" class="button">Rotate Counterclockwise</a>
+			</p>
+		</div>
+		<div class="two">
+			<h2>Special</h2>
+			<p style = "text-align: center">
+				<a href="/dm" class="button">Demo</a>
+				<a href="/au" class="button">Autonomy</a><br>
+				<a href="/ac" class="button">Activity</a>
+				<a href="/ag" class="button">Agression</a>
+				<a href="/aw" class="button">Awareness</a><br/>
+				<a href="/pg" class="button">Program</a>
+				<a href="/pp" class="button">Program Play</a>
+			</p>
+
+		</div>
+	</section>
 </body>
 </html>

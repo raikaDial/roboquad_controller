@@ -11,7 +11,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+	templateData = {
+		'shift_level': shift_level
+	}
+	return render_template('index.html', **templateData)
 
 @app.route('/<quad_command>')
 def commandQuad(quad_command):
@@ -30,7 +33,11 @@ def commandQuad(quad_command):
 		command = quad_command + shift_level
 		arduino_port.write(command.encode())
 
-	return render_template('index.html')
+	templateData = {
+    	'shift_level': shift_level
+	}
+
+	return render_template('index.html', **templateData)
 
 
 if __name__ == '__main__':
